@@ -17,7 +17,6 @@
         <maven.target.release>13</maven.target.release>
         <maven.surefire.version>3.0.0-M4</maven.surefire.version>
         <testng.version>7.1.0</testng.version>
-        <hamcrest.version>2.2</hamcrest.version>
         <json.schema.validator.version>4.3.0</json.schema.validator.version>
         <jackson.databind.version>2.10.3</jackson.databind.version>
         <javafaker.version>1.0.2</javafaker.version>
@@ -30,13 +29,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest</artifactId>
-            <version>${hamcrest.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
