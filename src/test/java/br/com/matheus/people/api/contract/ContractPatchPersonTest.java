@@ -1,6 +1,6 @@
 package br.com.matheus.people.api.contract;
 
-import br.com.matheus.people.api.clients.PatchPersonClient;
+import br.com.matheus.people.api.common.BaseTest;
 import br.com.matheus.people.api.models.Person;
 import org.testng.annotations.Test;
 
@@ -8,9 +8,7 @@ import java.io.File;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 
-public class ContractPatchPersonTest {
-
-    private PatchPersonClient patchPersonClient = new PatchPersonClient();
+public class ContractPatchPersonTest extends BaseTest {
 
     @Test
     public void validateContractPatchPerson() {

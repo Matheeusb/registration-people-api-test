@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Acceptation" verbose="1">
+
+    <test name="Acceptation Person">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.acceptation.AcceptationPersonTest"/>
+        </classes>
+    </test>
+
+</suite>

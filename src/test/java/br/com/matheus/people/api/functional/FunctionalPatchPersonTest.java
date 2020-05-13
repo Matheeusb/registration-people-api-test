@@ -1,6 +1,6 @@
 package br.com.matheus.people.api.functional;
 
-import br.com.matheus.people.api.clients.PatchPersonClient;
+import br.com.matheus.people.api.common.BaseTest;
 import br.com.matheus.people.api.datadriven.PatchDataProvider;
 import br.com.matheus.people.api.models.Person;
 import io.restassured.response.ValidatableResponse;
@@ -9,9 +9,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.core.Is.is;
 import static org.testng.Assert.assertEquals;
 
-public class FunctionalPatchPersonTest {
-
-    private PatchPersonClient patchPersonClient = new PatchPersonClient();
+public class FunctionalPatchPersonTest extends BaseTest {
 
     @Test(dataProviderClass = PatchDataProvider.class, dataProvider = "patchNamePerson")
     public void validateFunctionalPatchNamePerson(Person person, String name, String requestBody) {

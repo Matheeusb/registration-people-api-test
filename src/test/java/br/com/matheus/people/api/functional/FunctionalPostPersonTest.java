@@ -1,17 +1,16 @@
 package br.com.matheus.people.api.functional;
 
-import br.com.matheus.people.api.clients.PostPersonClient;
+import br.com.matheus.people.api.common.BaseTest;
 import br.com.matheus.people.api.datadriven.PostDataProvider;
 import br.com.matheus.people.api.models.Person;
 import io.restassured.response.ValidatableResponse;
-import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.core.Is.is;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-public class FunctionalPostPersonTest {
-
-    private PostPersonClient postPersonClient = new PostPersonClient();
+public class FunctionalPostPersonTest extends BaseTest {
 
     @Test(dataProviderClass = PostDataProvider.class, dataProvider = "postPerson")
     public void validateFunctionalPostPerson(Person personData) {

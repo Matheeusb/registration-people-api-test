@@ -1,6 +1,6 @@
 package br.com.matheus.people.api.functional;
 
-import br.com.matheus.people.api.clients.GetPersonClient;
+import br.com.matheus.people.api.common.BaseTest;
 import br.com.matheus.people.api.datadriven.GetDataProvider;
 import br.com.matheus.people.api.models.Person;
 import io.restassured.response.ValidatableResponse;
@@ -10,9 +10,7 @@ import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 
-public class FunctionalGetPersonTest {
-
-    private GetPersonClient getPersonClient = new GetPersonClient();
+public class FunctionalGetPersonTest extends BaseTest {
 
     @Test(dataProviderClass = GetDataProvider.class, dataProvider = "getPeople")
     public void validateFunctionalGetPeople(int index) {

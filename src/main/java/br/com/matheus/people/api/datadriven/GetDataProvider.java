@@ -1,6 +1,7 @@
 package br.com.matheus.people.api.datadriven;
 
 import br.com.matheus.people.api.clients.GetPersonClient;
+import br.com.matheus.people.api.configurations.Environment;
 import br.com.matheus.people.api.models.Person;
 import com.github.javafaker.Faker;
 import org.testng.annotations.DataProvider;
@@ -25,7 +26,7 @@ public class GetDataProvider {
 
     @DataProvider(name = "getPerson")
     public Object[][] getPerson() {
-        list.addAll(new GetPersonClient().getPeople().extract().jsonPath().getList("",Person.class));
+        list.addAll(new GetPersonClient(Environment.environmentExecution).getPeople().extract().jsonPath().getList("",Person.class));
         Collections.shuffle(list);
         return new Object[][]{
                 {list.get(0)}, {list.get(1)}, {list.get(2)}

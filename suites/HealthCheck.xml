@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Health Check" verbose="1">
+
+    <test name="Health Check API">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.healthcheck.HealthCheckTest"/>
+        </classes>
+    </test>
+
+</suite>

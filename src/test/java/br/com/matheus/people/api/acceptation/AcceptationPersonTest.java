@@ -1,18 +1,13 @@
 package br.com.matheus.people.api.acceptation;
 
-import br.com.matheus.people.api.clients.*;
+import br.com.matheus.people.api.common.BaseTest;
 import br.com.matheus.people.api.datadriven.AcceptationDataProvider;
 import br.com.matheus.people.api.models.Person;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
-public class AcceptationPersonTest {
-
-    private GetPersonClient getPersonClient = new GetPersonClient();
-    private PostPersonClient postPersonClient = new PostPersonClient();
-    private PutPersonClient putPersonClient = new PutPersonClient();
-    private DeletePersonClient deletePersonClient = new DeletePersonClient();
+public class AcceptationPersonTest extends BaseTest {
 
     @Test(dataProviderClass = AcceptationDataProvider.class, dataProvider = "acceptationPerson")
     public void validateAcceptationPerson(Person person, Person newPerson) {

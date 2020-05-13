@@ -1,6 +1,7 @@
 package br.com.matheus.people.api.datadriven;
 
 import br.com.matheus.people.api.clients.GetPersonClient;
+import br.com.matheus.people.api.configurations.Environment;
 import br.com.matheus.people.api.models.Person;
 import com.github.javafaker.Faker;
 import org.testng.annotations.DataProvider;
@@ -18,7 +19,7 @@ public class PatchDataProvider {
 
     @DataProvider(name = "patchNamePerson")
     public Object[][] patchNamePerson() {
-        list.addAll(new GetPersonClient().getPeople().extract().jsonPath().getList("", Person.class));
+        list.addAll(new GetPersonClient(Environment.environmentExecution).getPeople().extract().jsonPath().getList("", Person.class));
         Collections.shuffle(list);
         String attribute = "name";
 
@@ -43,7 +44,7 @@ public class PatchDataProvider {
 
     @DataProvider(name = "patchAgePerson")
     public Object[][] patchAgePerson() {
-        list.addAll(new GetPersonClient().getPeople().extract().jsonPath().getList("", Person.class));
+        list.addAll(new GetPersonClient("Homolog").getPeople().extract().jsonPath().getList("", Person.class));
         Collections.shuffle(list);
         String attribute = "age";
 
@@ -68,7 +69,7 @@ public class PatchDataProvider {
 
     @DataProvider(name = "patchEmailPerson")
     public Object[][] patchEmailPerson() {
-        list.addAll(new GetPersonClient().getPeople().extract().jsonPath().getList("", Person.class));
+        list.addAll(new GetPersonClient("Homolog").getPeople().extract().jsonPath().getList("", Person.class));
         Collections.shuffle(list);
         String attribute = "email";
 

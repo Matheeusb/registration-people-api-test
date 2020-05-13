@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Functional" verbose="1">
+
+    <test name="Functional Get Person">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.functional.FunctionalGetPersonTest"/>
+        </classes>
+    </test>
+
+    <test name="Functional Post Person">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.functional.FunctionalPostPersonTest"/>
+        </classes>
+    </test>
+
+    <test name="Functional Put Person">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.functional.FunctionalPutPersonTest"/>
+        </classes>
+    </test>
+
+    <test name="Functional Patch Person">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.functional.FunctionalPatchPersonTest"/>
+        </classes>
+    </test>
+
+    <test name="Functional Delete Person">
+        <parameter name="environment" value="${environment}"/>
+        <classes>
+            <class name="br.com.matheus.people.api.functional.FunctionalDeletePersonTest"/>
+        </classes>
+    </test>
+
+
+</suite>
