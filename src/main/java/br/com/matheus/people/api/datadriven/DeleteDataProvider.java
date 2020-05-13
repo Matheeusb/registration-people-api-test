@@ -15,10 +15,6 @@ public class DeleteDataProvider {
     private Faker faker = new Faker();
     List<Person> list = new ArrayList<>();
 
-    public DeleteDataProvider() {
-
-    }
-
     @DataProvider(name = "deletePerson")
     public Object[][] deletePerson() {
         list.addAll(new GetPersonClient(Environment.environmentExecution).getPeople().extract().jsonPath().getList("",Person.class));
