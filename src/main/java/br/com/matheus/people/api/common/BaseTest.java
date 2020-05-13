@@ -2,7 +2,7 @@ package br.com.matheus.people.api.common;
 
 import br.com.matheus.people.api.clients.*;
 import br.com.matheus.people.api.configurations.Environment;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -15,7 +15,7 @@ public abstract class BaseTest {
     protected PatchPersonClient patchPersonClient;
     protected DeletePersonClient deletePersonClient;
 
-    @BeforeTest
+    @BeforeClass
     @Parameters("environment")
     public void setUp(@Optional("Homolog") String environment) {
         getActuatorClient = new GetActuatorClient(environment);
