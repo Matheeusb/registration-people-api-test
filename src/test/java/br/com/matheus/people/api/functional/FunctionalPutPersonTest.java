@@ -50,7 +50,7 @@ public class FunctionalPutPersonTest extends BaseTest {
         ValidatableResponse response = putPersonClient.putPersonBadRequest(person);
 
         response.body("field[0]", is("age"));
-        response.body("error[0]", is("must be greater than or equal to 1"));
+        response.body("error[0]", is("must be greater than 0"));
     }
 
     @Test(dataProviderClass = PutDataProvider.class, dataProvider = "putPersonNotFound")

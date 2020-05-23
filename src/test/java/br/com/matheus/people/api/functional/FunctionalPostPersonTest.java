@@ -51,6 +51,6 @@ public class FunctionalPostPersonTest extends BaseTest {
         ValidatableResponse response = postPersonClient.postPersonBadRequest(person);
 
         response.body("field[0]", is("age"));
-        response.body("error[0]", is("must be greater than or equal to 1"));
+        response.body("error[0]", is("must be greater than 0"));
     }
 }
