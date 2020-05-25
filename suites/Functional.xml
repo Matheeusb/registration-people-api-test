@@ -22,13 +22,6 @@
         </classes>
     </test>
 
-    <test name="Functional Patch Person">
-        <parameter name="environment" value="${environment}"/>
-        <classes>
-            <class name="br.com.matheus.people.api.functional.FunctionalPatchPersonTest"/>
-        </classes>
-    </test>
-
     <test name="Functional Delete Person">
         <parameter name="environment" value="${environment}"/>
         <classes>

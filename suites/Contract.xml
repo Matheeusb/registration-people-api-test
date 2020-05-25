@@ -22,11 +22,4 @@
         </classes>
     </test>
 
-    <test name="Contract Patch Person">
-        <parameter name="environment" value="${environment}"/>
-        <classes>
-            <class name="br.com.matheus.people.api.contract.ContractPatchPersonTest"/>
-        </classes>
-    </test>
-
 </suite>

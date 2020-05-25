@@ -12,7 +12,6 @@ public abstract class BaseTest {
     protected GetPersonClient getPersonClient;
     protected PostPersonClient postPersonClient;
     protected PutPersonClient putPersonClient;
-    protected PatchPersonClient patchPersonClient;
     protected DeletePersonClient deletePersonClient;
 
     @BeforeClass
@@ -22,7 +21,6 @@ public abstract class BaseTest {
         getPersonClient = new GetPersonClient(environment);
         postPersonClient = new PostPersonClient(environment);
         putPersonClient = new PutPersonClient(environment);
-        patchPersonClient = new PatchPersonClient(environment);
         deletePersonClient = new DeletePersonClient(environment);
 
         Environment.environmentExecution = environment;
