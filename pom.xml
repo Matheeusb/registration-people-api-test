@@ -18,7 +18,7 @@
         <maven.surefire.version>3.0.0-M4</maven.surefire.version>
         <testng.version>7.1.0</testng.version>
         <json.schema.validator.version>4.3.0</json.schema.validator.version>
-        <jackson.databind.version>2.10.5.1</jackson.databind.version>
+        <jackson.databind.version>2.13.4.1</jackson.databind.version>
         <javafaker.version>1.0.2</javafaker.version>
         <registration.people.api.client.version>1.0-SNAPSHOT</registration.people.api.client.version>
     </properties>
